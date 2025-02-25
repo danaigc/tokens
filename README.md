@@ -7,9 +7,9 @@
 - 在后台配置许可证，许可证请联系作者获取，qq：1727283040
 - `./deploy.sh` 一键启动部署
 
-## 模型支持
+## 模型
 
-目前**只支持加Grok平台**，后续将支持Claude、OpenAI等平台/
+目前**只支持加Grok平台**的模型，后续将支持Claude、OpenAI等平台
 
 - `grok-2`
 - `grok-2-image`
@@ -28,7 +28,7 @@ GROK API 端点：`http://localhost:你的端口/grok/v1/chat/completions`
 
 
 ```bash
-curl --location --request POST 'http://localhost:8989/grok/v1/chat/completions' \
+curl --location --request POST 'http://localhost:你的端口/grok/v1/chat/completions' \
 --header 'Content-Type: application/json' \
 --data-raw '{
     "messages": [
@@ -37,10 +37,11 @@ curl --location --request POST 'http://localhost:8989/grok/v1/chat/completions' 
             "content": "你好"
         }
     ],
-    "model": "grok-3",
+    "model": "grok-3-reasoning",
     "stream": true
 }'
 ```
 
-<img width="1056" alt="image" src="https://github.com/user-attachments/assets/e5659df6-50d2-4e2e-99c3-936eb3a01e4a" />
+<img width="1060" alt="image" src="https://github.com/user-attachments/assets/1351b719-b4fd-416d-9e62-f14ddbb329c9" />
+
 
