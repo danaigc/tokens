@@ -9,6 +9,8 @@
 
 ## 模型支持
 
+目前**只支持加Grok平台**，后续将支持Claude、OpenAI等平台/
+
 - `grok-2`
 - `grok-2-image`
 - `grok-2-search`
