@@ -42,14 +42,3 @@ services:
     depends_on:
       - redis
       - mysql
-
-  watch:
-    image: containrrr/watchtower
-    container_name: watch
-    restart: always
-    environment:
-      - TZ=Asia/Shanghai
-    volumes:
-      - /var/run/docker.sock:/var/run/docker.sock
-      - ~/.docker/config.json:/config.json
-    command: --scope fakeoai --cleanup --interval 60
