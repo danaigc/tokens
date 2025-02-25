@@ -2,9 +2,9 @@
 
 ## 运行
 
-- 填写好 `config/config.yaml` 和 `docker-compose.yaml（需注意配置LICENSE许可证）` 文件需要自定义的配置
-- 许可证请联系作者获取，qq：1727283040
-- `docker compose up -d` 一键启动部署
+- 填写好 `config/config.yaml` 和 `docker-compose.yaml` 文件需要自定义的配置
+- 在后台配置许可证，许可证请联系作者获取，qq：1727283040
+- `./deploy.sh` 一键启动部署
 
 ## 模型支持
 
