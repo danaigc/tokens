@@ -25,7 +25,7 @@ services:
     volumes:
       - ./data/redis/:/data/
 
-  share:
+  tokens:
     image: fakeoai/tokens
     container_name: tokens
     restart: always
@@ -39,6 +39,9 @@ services:
       - ./logs:/app/logs
     labels:
       - 'com.centurylinklabs.watchtower.scope=fakeoai'
+    depends_on:
+      - redis
+      - mysql
 
   watch:
     image: containrrr/watchtower
