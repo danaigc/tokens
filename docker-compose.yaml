@@ -32,7 +32,6 @@ services:
     network_mode: 'host'
     environment:
       TZ: Asia/Shanghai
-      LICENSE: 你的许可证
     volumes:
       - ./config:/app/config
       - ./keys:/app/keys
