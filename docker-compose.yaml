@@ -27,7 +27,6 @@ services:
     image: fakeoai/tokens
     container_name: tokens
     restart: always
-    network_mode: 'host'
     environment:
       TZ: Asia/Shanghai
     ports:
