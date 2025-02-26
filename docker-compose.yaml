@@ -6,7 +6,6 @@ services:
     container_name: mysql
     command: --mysql-native-password=ON --character-set-server=utf8mb4 --collation-server=utf8mb4_unicode_ci
     restart: always
-    network_mode: 'host'
     volumes:
       - ./data/mysql/:/var/lib/mysql/
     environment:
@@ -17,7 +16,6 @@ services:
   redis:
     image: redis
     container_name: redis
-    network_mode: 'host'
     # command: --requirepass "123456" # redis库密码,不需要密码注释本行
     restart: always
     environment:
@@ -36,8 +34,6 @@ services:
       - ./config:/app/config
       - ./keys:/app/keys
       - ./logs:/app/logs
-    labels:
-      - 'com.centurylinklabs.watchtower.scope=fakeoai'
     depends_on:
       - redis
       - mysql
