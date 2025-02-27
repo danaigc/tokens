@@ -22,7 +22,7 @@
 - `grok-2`：
 - `grok-2-image`：使用grok2进行生图
 - `grok-2-search`：使用grok2进行联网搜索
-- `grok-3`
+- `grok-3`：可开启自动调用联网、生图、思考以及深度网络搜索能力(需在后台系统配置中手动开启)
 - `grok-3-image`：使用grok3进行生图
 - `grok-3-deepsearch`：使用grok3进行深度联网搜索
 - `grok-3-reasoning`：使用grok3进行思考
