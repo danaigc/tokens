@@ -12,7 +12,7 @@
 5. 添加对应平台的token（现在只支持grok平台），然后就可以直接使用curl或者接入到newapi或oneapi中进行测试了
    
    <img width="805" alt="image" src="https://github.com/user-attachments/assets/a48f2ea1-9367-47d1-9722-c208b5efede8" />
-6. 在newapi或oneapi中的密钥可以随便填写，代理填写：`http://localhost:你的端口/grok`，本程序没有任何鉴权，也不建议把程序暴露到公网，建议使用newapi或者oneapi进行请求
+6. 在newapi或oneapi中的密钥：你的许可证，代理填写：`http://localhost:你的端口/grok`，建议使用newapi或者oneapi进行请求
 
 
 ## 模型
