@@ -10,7 +10,7 @@
 1. 填写好 `config/config.yaml` 和 `docker-compose.yaml` 文件需要自定义的配置
 2. `./deploy.sh` 一键启动部署
 3. 浏览器访问 `http://localhost:你的端口` 进入后台管理页面，账号密码模型都是 `admin`（请及时在系统配置中修改）
-4. 在系统配置中填写许可证，许可证150元/月，请联系作者获取，qq：1727283040
+4. 在系统配置中填写许可证，许可证请联系作者获取，qq：1727283040
    
    <img width="829" alt="image" src="https://github.com/user-attachments/assets/d0392eba-6185-4e9e-8ec2-453204244128" />
 5. 添加对应平台的token（现在只支持grok平台），然后就可以直接使用curl或者接入到newapi或oneapi中进行测试了
