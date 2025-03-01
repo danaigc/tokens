@@ -35,7 +35,7 @@
 > 
 > 支持openai标准格式的**文件图片上传**，文件（包括图片）可以传url或者base64格式
 
-## API端点请求示例
+## Chat2API
 
 GROK API 端点：`http://localhost:你的端口/grok/v1/chat/completions`
 
@@ -59,6 +59,10 @@ curl --location --request POST 'http://localhost:你的端口/grok/v1/chat/compl
 ```
 
 <img width="1060" alt="image" src="https://github.com/user-attachments/assets/1351b719-b4fd-416d-9e62-f14ddbb329c9" />
+
+## 接口代理
+
+- `Grok` 官网接口代理：`http://localhost:你的端口/grok/rest/*`
 
 ## 后台功能界面
 
