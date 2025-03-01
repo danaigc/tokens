@@ -10,13 +10,13 @@ services:
       - ./data/mysql/:/var/lib/mysql/
     environment:
       TZ: Asia/Shanghai
-      MYSQL_ROOT_PASSWORD: '123456'
+      MYSQL_ROOT_PASSWORD: 'fakeoai'
       MYSQL_DATABASE: 'tokens'
 
   redis:
     image: redis
     container_name: redis
-    # command: --requirepass "123456" # redis库密码,不需要密码注释本行
+    command: --requirepass "fakeoai" # redis库密码,不需要密码注释本行
     restart: always
     environment:
       TZ: Asia/Shanghai
