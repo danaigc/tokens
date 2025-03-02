@@ -15,7 +15,7 @@
    <img width="829" alt="image" src="https://github.com/user-attachments/assets/d0392eba-6185-4e9e-8ec2-453204244128" />
 5. 添加对应平台的token，然后就可以直接使用curl或者接入到newapi或oneapi中进行测试了
    
-   <img width="805" alt="image" src="https://github.com/user-attachments/assets/a48f2ea1-9367-47d1-9722-c208b5efede8" />
+   <img width="902" alt="image" src="https://github.com/user-attachments/assets/e6bed467-442c-42ff-ba63-03e167795d7d" />
 6. 在newapi或oneapi中的密钥：你的许可证，代理填写：`http://localhost:你的端口/grok` 或 `http://localhost:你的端口/claude`，建议使用newapi或者oneapi进行请求
 
 
