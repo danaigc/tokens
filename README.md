@@ -47,30 +47,41 @@
 
 ## Chat2API
 
-GROK API 端点：`http://localhost:你的端口/grok/v1/chat/completions`
+- GROK API 端点：`http://localhost:你的端口/grok/v1/chat/completions`
 
-<img width="1554" alt="image" src="https://github.com/user-attachments/assets/519901c9-0d71-45be-8dc9-cef65941290b" />
+   ```bash
+   curl --location --request POST 'http://localhost:你的端口/grok/v1/chat/completions' \
+   --header 'Content-Type: application/json' \
+   --header 'Authorization: 你的许可证' \
+   --data-raw '{
+       "messages": [
+           {
+               "role": "user",
+               "content": "你是什么模型"
+           }
+       ],
+       "model": "grok-3-reasoning",
+       "stream": true
+   }'
+   ```
 
+- Claude API 端点：`http://localhost:你的端口/claude/v1/chat/completions`
 
-```bash
-curl --location --request POST 'http://localhost:你的端口/grok/v1/chat/completions' \
---header 'Content-Type: application/json' \
---header 'Authorization: 你的许可证' \
---data-raw '{
-    "messages": [
-        {
-            "role": "user",
-            "content": "你是什么模型"
-        }
-    ],
-    "model": "grok-3-reasoning",
-    "stream": true
-}'
-```
-
-<img width="1060" alt="image" src="https://github.com/user-attachments/assets/1351b719-b4fd-416d-9e62-f14ddbb329c9" />
-
-Claude API 端点：`http://localhost:你的端口/claude/v1/chat/completions`
+   ```bash
+   curl --location --request POST 'http://localhost:你的端口/claude/v1/chat/completions' \
+   --header 'Content-Type: application/json' \
+   --header 'Authorization: 你的许可证' \
+   --data-raw '{
+       "messages": [
+           {
+               "role": "user",
+               "content": "你是什么模型"
+           }
+       ],
+       "model": "claude-sonnet-3-7",
+       "stream": true
+   }'
+   ```
 
 ## 接口代理
 
