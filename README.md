@@ -15,13 +15,28 @@
    <img width="829" alt="image" src="https://github.com/user-attachments/assets/d0392eba-6185-4e9e-8ec2-453204244128" />
 5. 添加对应平台的token，然后就可以直接使用curl或者接入到newapi或oneapi中进行测试了
    
-   <img width="902" alt="image" src="https://github.com/user-attachments/assets/e6bed467-442c-42ff-ba63-03e167795d7d" />
-6. 在newapi或oneapi中的密钥：你的许可证，代理填写：`http://localhost:你的端口/grok` 或 `http://localhost:你的端口/claude`，建议使用newapi或者oneapi进行请求
+   <img width="776" alt="image" src="https://github.com/user-attachments/assets/8aef6c17-1346-4986-805b-3c764e17d676" />
+6. 在newapi或oneapi中使用
+   - 密钥：你的许可证
+   - 代理地址：
+      - **ChatGPT**：`http://localhost:你的端口/chatgpt`
+      - **Grok**：`http://localhost:你的端口/grok`
+      - **Claude**：`http://localhost:你的端口/claude`
 
 
 ## 模型列表
 
 > 支持openai标准格式的**文件图片上传**，文件（包括图片）可以传url或者base64格式
+
+### `ChatGPT` 模型
+
+- `auto`
+- `gpt-4o`
+- `gpt-4o-mini`
+- `o3-mini`
+- `o1`
+- `o1-pro`
+- `o3-mini-high`
 
 ### `Grok` 模型
 
@@ -46,6 +61,24 @@
 > 截止今日，免费账号只支持调用 `claude-sonnet-3-7` 模型，Pro订阅类型的账号可以调用以上Claude全系模型
 
 ## Chat2API
+
+- ChatGPT API 端点：`http://localhost:你的端口/chatgpt/v1/chat/completions`
+
+   ```bash
+   curl --location --request POST 'http://localhost:你的端口/chatgpt/v1/chat/completions' \
+   --header 'Content-Type: application/json' \
+   --header 'Authorization: 你的许可证' \
+   --data-raw '{
+       "messages": [
+           {
+               "role": "user",
+               "content": "你是什么模型"
+           }
+       ],
+       "model": "gpt-4o",
+       "stream": true
+   }'
+   ```
 
 - GROK API 端点：`http://localhost:你的端口/grok/v1/chat/completions`
 
