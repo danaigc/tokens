@@ -30,13 +30,15 @@
 
 ### `ChatGPT` 模型
 
-- `auto`
-- `gpt-4o`
-- `gpt-4o-mini`
-- `o3-mini`
-- `o1`
-- `o1-pro`
-- `o3-mini-high`
+- `auto`：普号可用
+- `gpt-4o`：普号可用
+- `gpt-4o-mini`：普号可用
+- `o3-mini`：普号可用
+- `o1`：需订阅类型的token
+- `o1-pro`：需订阅类型的token
+- `o3-mini-high`：需订阅类型的token
+
+> ChatGPT平台的token需要单独在系统配置中填写网关地址，模型是否降智都在网关中处理，与本程序没有任何关联，本程序只负责转发处理消息流转OpenAI格式。
 
 ### `Grok` 模型
 
