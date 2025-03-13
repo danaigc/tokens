@@ -126,18 +126,6 @@ https://tokens.yuanbao.dev
 
 - `Grok` 官网接口代理：`http://localhost:你的端口/grok/rest/*`
 
-## 后台功能界面
-
-<img width="1506" alt="image" src="https://github.com/user-attachments/assets/931563d3-6962-412c-985e-91d964b326a1" />
-
-<img width="1504" alt="image" src="https://github.com/user-attachments/assets/ab18db45-51c9-40f1-baa6-6ab3c512393d" />
-
-<img width="1509" alt="image" src="https://github.com/user-attachments/assets/12876ef1-7431-4246-accf-1f23be26195b" />
-
-<img width="1504" alt="image" src="https://github.com/user-attachments/assets/18183171-8f2c-4b95-839e-9ab86d9914c6" />
-
-<img width="1503" alt="image" src="https://github.com/user-attachments/assets/3eb2d88f-db5a-47e5-a6e4-4c0b08353fd9" />
-
 ## Star History
 
 ![Star History Chart](https://api.star-history.com/svg?repos=fakeoai/tokens&type=Timeline)
