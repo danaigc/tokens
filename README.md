@@ -5,6 +5,10 @@
 
 一个Token管理平台，专逆各种AI平台的对话接口，推荐使用**免费账号**加入Token池中无限薅羊毛。
 
+## 在线预览
+
+https://tokens.yuanbao.dev
+
 ## 运行
 
 1. 填写好 `config/config.yaml` 和 `docker-compose.yaml` 文件需要自定义的配置
@@ -134,6 +138,9 @@
 
 <img width="1503" alt="image" src="https://github.com/user-attachments/assets/3eb2d88f-db5a-47e5-a6e4-4c0b08353fd9" />
 
+## Star History
+
+![Star History Chart](https://api.star-history.com/svg?repos=fakeoai/tokens&type=Timeline)
 
 
 
