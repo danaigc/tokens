@@ -26,6 +26,7 @@ https://tokens.yuanbao.dev
       - **ChatGPT**：`http://localhost:你的端口/chatgpt`
       - **Grok**：`http://localhost:你的端口/grok`
       - **Claude**：`http://localhost:你的端口/claude`
+      - **Cursor**：`http://localhost:你的端口/cursor`
 
 
 ## 模型列表
@@ -56,7 +57,7 @@ https://tokens.yuanbao.dev
 
 > 一个Grok普号可以分别调用很多次以上模型，程序都是轮训自动监控一个号模型上限，把次数薅到极致！！！
 
-  ### `Claude` 模型
+### `Claude` 模型
 
 - `claude-opus-3`：需有 `Claude Pro` 订阅的token才能进行调用
 - `claude-sonnet-3-5`：需有 `Claude Pro` 订阅的token才能进行调用
@@ -65,6 +66,34 @@ https://tokens.yuanbao.dev
 - `claude-sonnet-3-7-reasoner`：使用claude 3.7模型进行思考，需有 `Claude Pro` 订阅的token才能进行调用
 
 > 截止今日，免费账号只支持调用 `claude-sonnet-3-7` 模型，Pro订阅类型的账号可以调用以上Claude全系模型
+
+### `Cursor` 模型
+
+- `gpt-4`
+- `claude-3.5-sonnet`
+- `claude-3.7-sonnet`
+- `claude-3.7-sonnet-thinking`
+- `gpt-4o`
+- `claude-3-opus`
+- `gpt-3.5-turbo`
+- `gpt-4-turbo-2024-04-09`
+- `gpt-4o-128k`
+- `gemini-1.5-flash-500k`
+- `claude-3-haiku-200k`
+- `claude-3-5-sonnet-200k`
+- `gpt-4o-mini`
+- `o1-mini`
+- `claude-3.5-haiku`
+- `gemini-2.0-pro-exp`
+- `gemini-2.0-flash-thinking-exp`
+- `gemini-2.0-flash`
+- `deepseek-v3`
+- `deepseek-r1`
+- `o3-mini`
+- `grok-2`
+- `o1-preview`：**Pro订阅类型**的token才可用
+- `o1`：**Pro订阅类型**的token才可用
+- `gpt-4.5-preview`：**Pro订阅类型**的token才可用
 
 ## Chat2API
 
@@ -118,6 +147,24 @@ https://tokens.yuanbao.dev
            }
        ],
        "model": "claude-sonnet-3-7",
+       "stream": true
+   }'
+   ```
+
+- Cursor API 端点：`http://localhost:你的端口/cursor/v1/chat/completions`
+
+   ```bash
+   curl --location --request POST 'http://localhost:你的端口/cursor/v1/chat/completions' \
+   --header 'Content-Type: application/json' \
+   --header 'Authorization: 你的许可证' \
+   --data-raw '{
+       "messages": [
+           {
+               "role": "user",
+               "content": "你是什么模型"
+           }
+       ],
+       "model": "cursor-fast",
        "stream": true
    }'
    ```
