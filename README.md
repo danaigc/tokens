@@ -11,6 +11,15 @@ https://tokens.yuanbao.dev
 
 ## 运行
 
+```bash
+# 克隆仓库配置文件
+git clone https://github.com/FakeOAI/tokens.git
+# 进入项目
+cd tokens
+# 运行一件部署脚本
+./deploy.sh
+```
+
 1. 填写好 `config/config.yaml` 和 `docker-compose.yaml` 文件需要自定义的配置
 2. `./deploy.sh` 一键启动部署
 3. 浏览器访问 `http://localhost:你的端口` 进入后台管理页面，账号密码模型都是 `admin`（请及时在系统配置中修改）
