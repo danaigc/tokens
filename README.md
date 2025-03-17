@@ -16,7 +16,7 @@ https://tokens.yuanbao.dev
 git clone https://github.com/FakeOAI/tokens.git
 # 进入项目
 cd tokens
-# 运行一件部署脚本
+# 运行一键部署脚本
 ./deploy.sh
 ```
 
