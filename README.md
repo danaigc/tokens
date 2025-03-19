@@ -22,7 +22,7 @@ cd tokens
 
 1. 填写好 `config/config.yaml` 和 `docker-compose.yaml` 文件需要自定义的配置
 2. `./deploy.sh` 一键启动部署
-3. 浏览器访问 `http://localhost:你的端口` 进入后台管理页面，账号密码模型都是 `admin`（请及时在系统配置中修改）
+3. 浏览器访问 `http://你的IP:你的端口` 进入后台管理页面，账号密码模型都是 `admin`（请及时在系统配置中修改）
 4. 在系统配置中填写许可证，许可证请联系作者获取，qq：1727283040
    
    <img width="829" alt="image" src="https://github.com/user-attachments/assets/d0392eba-6185-4e9e-8ec2-453204244128" />
@@ -32,10 +32,10 @@ cd tokens
 6. 在newapi或oneapi中使用
    - 密钥：你的许可证
    - 代理地址：
-      - **ChatGPT**：`http://localhost:你的端口/chatgpt`
-      - **Grok**：`http://localhost:你的端口/grok`
-      - **Claude**：`http://localhost:你的端口/claude`
-      - **Cursor**：`http://localhost:你的端口/cursor`
+      - **ChatGPT**：`http://你的IP:你的端口/chatgpt`
+      - **Grok**：`http://你的IP:你的端口/grok`
+      - **Claude**：`http://你的IP:你的端口/claude`
+      - **Cursor**：`http://你的IP:你的端口/cursor`
 
 
 ## 模型列表
@@ -106,10 +106,10 @@ cd tokens
 
 ## Chat2API
 
-- ChatGPT API 端点：`http://localhost:你的端口/chatgpt/v1/chat/completions`
+- ChatGPT API 端点：`http://你的IP:你的端口/chatgpt/v1/chat/completions`
 
    ```bash
-   curl --location --request POST 'http://localhost:你的端口/chatgpt/v1/chat/completions' \
+   curl --location --request POST 'http://你的IP:你的端口/chatgpt/v1/chat/completions' \
    --header 'Content-Type: application/json' \
    --header 'Authorization: 你的许可证' \
    --data-raw '{
@@ -124,10 +124,10 @@ cd tokens
    }'
    ```
 
-- GROK API 端点：`http://localhost:你的端口/grok/v1/chat/completions`
+- GROK API 端点：`http://你的IP:你的端口/grok/v1/chat/completions`
 
    ```bash
-   curl --location --request POST 'http://localhost:你的端口/grok/v1/chat/completions' \
+   curl --location --request POST 'http://你的IP:你的端口/grok/v1/chat/completions' \
    --header 'Content-Type: application/json' \
    --header 'Authorization: 你的许可证' \
    --data-raw '{
@@ -142,10 +142,10 @@ cd tokens
    }'
    ```
 
-- Claude API 端点：`http://localhost:你的端口/claude/v1/chat/completions`
+- Claude API 端点：`http://你的IP:你的端口/claude/v1/chat/completions`
 
    ```bash
-   curl --location --request POST 'http://localhost:你的端口/claude/v1/chat/completions' \
+   curl --location --request POST 'http://你的IP:你的端口/claude/v1/chat/completions' \
    --header 'Content-Type: application/json' \
    --header 'Authorization: 你的许可证' \
    --data-raw '{
@@ -160,10 +160,10 @@ cd tokens
    }'
    ```
 
-- Cursor API 端点：`http://localhost:你的端口/cursor/v1/chat/completions`
+- Cursor API 端点：`http://你的IP:你的端口/cursor/v1/chat/completions`
 
    ```bash
-   curl --location --request POST 'http://localhost:你的端口/cursor/v1/chat/completions' \
+   curl --location --request POST 'http://你的IP:你的端口/cursor/v1/chat/completions' \
    --header 'Content-Type: application/json' \
    --header 'Authorization: 你的许可证' \
    --data-raw '{
@@ -180,7 +180,7 @@ cd tokens
 
 ## 接口代理
 
-- `Grok` 官网接口代理：`http://localhost:你的端口/grok/rest/*`
+- `Grok` 官网接口代理：`http://你的IP:你的端口/grok/rest/*`
 
 ## Star History
 
