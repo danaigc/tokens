@@ -11,6 +11,10 @@ https://tokens.yuanbao.dev
 
 ## 运行
 
+> 服务器需要有docker环境
+> 
+> 流式对话用户需要至少2-4核4g内存的服务器，非流式对话用户推荐8h8g的服务器配置
+
 ```bash
 # 克隆仓库配置文件
 git clone https://github.com/FakeOAI/tokens.git
