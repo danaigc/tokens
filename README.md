@@ -104,6 +104,8 @@ cd tokens
 - `o1-preview`：**Pro订阅类型**的token才可用
 - `o1`：**Pro订阅类型**的token才可用
 - `gpt-4.5-preview`：**Pro订阅类型**的token才可用
+- `claude-3.7-sonnet-max`：**Pro订阅类型**的token才可用
+- `claude-3.7-sonnet-thinking-max`：**Pro订阅类型**的token才可用
 
 ## Chat2API
 
