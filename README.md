@@ -181,10 +181,6 @@ cd tokens
    }'
    ```
 
-## 接口代理
-
-- `Grok` 官网接口代理：`http://你的IP:你的端口/grok/rest/*`
-
 ## Star History
 
 ![Star History Chart](https://api.star-history.com/svg?repos=fakeoai/tokens&type=Timeline)
