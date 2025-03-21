@@ -25,10 +25,10 @@ cd tokens
 3. 浏览器访问 `http://你的IP:你的端口` 进入后台管理页面，账号密码模型都是 `admin`（请及时在系统配置中修改）
 4. 在系统配置中填写许可证，许可证请联系作者获取，qq：1727283040
    
-   <img width="829" alt="image" src="https://github.com/user-attachments/assets/d0392eba-6185-4e9e-8ec2-453204244128" />
+   <img width="833" alt="image" src="https://github.com/user-attachments/assets/093965e6-d22f-4299-90ba-3658277d4adb" />
 5. 添加对应平台的token，然后就可以直接使用curl或者接入到newapi或oneapi中进行测试了
    
-   <img width="776" alt="image" src="https://github.com/user-attachments/assets/8aef6c17-1346-4986-805b-3c764e17d676" />
+   <img width="773" alt="image" src="https://github.com/user-attachments/assets/e666e1c9-968e-4731-9d59-5a2451ab48be" />
 6. 在newapi或oneapi中使用
    - 密钥：你的许可证
    - 代理地址：
@@ -176,7 +176,7 @@ cd tokens
                "content": "你是什么模型"
            }
        ],
-       "model": "cursor-fast",
+       "model": "claude-3.7-sonnet-thinking",
        "stream": true
    }'
    ```
