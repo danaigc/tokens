@@ -62,6 +62,7 @@ cd tokens
 - `grok-3`：可开启自动调用联网、生图、思考以及深度网络搜索能力(需在后台系统配置中手动开启)
 - `grok-3-image`：使用grok3进行生图
 - `grok-3-deepsearch`：使用grok3进行深度联网搜索
+- `grok-3-deepersearch`：使用grok3进行深度思考联网搜索
 - `grok-3-reasoning`：使用grok3进行思考
 
 > 一个Grok普号可以分别调用很多次以上模型，程序都是轮训自动监控一个号模型上限，把次数薅到极致！！！
