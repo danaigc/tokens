@@ -111,6 +111,10 @@ cd tokens
 - `claude-3.7-sonnet-max`：**Pro订阅类型**的token才可用
 - `claude-3.7-sonnet-thinking-max`：**Pro订阅类型**的token才可用
 
+> 使用此程序逆向的cursor不存在任何乱码，请不要拿tokens和其他开源项目进行对比！！！
+> 
+> 使用此程序逆向的cursor不存在任何封号，请不要拿tokens和其他开源项目进行对比！！！
+
 ## Chat2API
 
 - ChatGPT API 端点：`http://你的IP:你的端口/chatgpt/v1/chat/completions`
