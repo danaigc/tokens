@@ -5,6 +5,21 @@
 
 一个Token管理平台，专逆各种AI平台的对话接口，推荐使用**免费账号**加入Token池中无限薅羊毛。
 
+## 项目结构
+
+```
+tokens
+│
+├── config # 项目配置
+│    ├── config.yaml # 数据库持久层、服务端口日志配置
+│    └── system.yaml # 程序系统配置，账号密码以及后台的系统配置都保存在此文件
+├── keys # ssl证书存放位置
+│    ├── ssl.pem # ssl证书公钥
+│    └── ssl.key # ssl证书私钥
+├── deploy.sh # 一键启动脚本
+└── docker-compose.yaml # docker服务编排文件
+```
+
 ## 在线预览
 
 https://tokens.yuanbao.dev
