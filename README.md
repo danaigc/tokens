@@ -116,6 +116,7 @@ cd tokens
 - `gemini-2.0-pro-exp`
 - `gemini-2.0-flash-thinking-exp`
 - `gemini-2.0-flash`
+- `gemini-2.5-pro-exp-03-25`
 - `deepseek-v3`
 - `deepseek-r1`
 - `o3-mini`
