@@ -1,9 +1,19 @@
 # Tokens
 
 > [!IMPORTANT]
-> ✨ 程序自带过盾，无视任何cloudflare防御，放心使用
+> ✨ 程序自带过盾，无视各大平台的cloudflare防御，放心使用
+>
+> ✨ 程序的前后端代码都打包到一个20多MB的二进制中，go语言编写，简易且高性能。
 
 一个Token管理平台，专逆各种国外AI平台的对话接口，推荐使用**免费账号**加入Token池中无限薅羊毛。
+
+## 项目功能
+
+- [X] 支持 `Grok`、`Claude`、`Cursor`、`ChatGPT` 等平台逆向转OpenAI标准对话格式
+- [X] 支持全局代理配置以及各平台代理的独立配置，session标识占位符固定IP等玩法
+- [X] 支持对话内容审核
+- [X] 各平台token池轮训对话，自动标识token模型的上限状态、token异常状态
+- [ ] ......
 
 ## 项目结构
 
@@ -22,42 +32,99 @@ tokens
 
 ## 在线预览
 
-https://tokens.yuanbao.dev
+访问在线预览：[tokens.yuanbao.dev](https://tokens.yuanbao.dev)
 
-## 运行
+## 运行指南
 
-> 服务器需要有docker环境
-> 
-> 流式对话用户需要至少2-4核4g内存的服务器，非流式对话用户推荐8h8g的服务器配置
+> 服务器环境要求：
+> - Docker环境
+> - 流式对话用户需至少配置2-4核4GB内存的服务器
+> - 非流式对话用户推荐8核8GB的服务器配置
 
-```bash
-# 克隆仓库配置文件
-git clone https://github.com/FakeOAI/tokens.git
-# 进入项目
-cd tokens
-# 运行一键部署脚本
-./deploy.sh
-```
+### 步骤
 
-1. 填写好 `config/config.yaml` 和 `docker-compose.yaml` 文件需要自定义的配置
-2. `./deploy.sh` 一键启动部署
-3. 浏览器访问 `http://你的IP:你的端口` 进入后台管理页面，账号密码模型都是 `admin`（请及时在系统配置中修改）
-4. 在系统配置中填写许可证，许可证请联系作者获取，qq：1727283040
+1. 克隆项目配置文件：
+
+   ```bash
+   git clone https://github.com/FakeOAI/tokens.git
+   ```
+
+2. 进入项目目录：
+
+   ```bash
+   cd tokens
+   ```
+
+3. 运行一键部署脚本：
+
+   ```bash
+   ./deploy.sh
+   ```
+
+4. 编辑配置文件：
+   - 修改 `config/config.yaml` 和 `docker-compose.yaml` 中的配置
+   - 启动部署后，浏览器访问 `http://<你的IP>:<你的端口>` 进入后台管理页面
+   - 默认账号和密码为 `admin`，请及时修改
+
+5. 在系统配置中填写许可证（联系作者获取许可证，QQ：1727283040）
+
+6. 添加平台Token后，即可通过 `curl` 或集成至 [NewAPI](https://github.com/Calcium-Ion/new-api) 或 [OneAPI](https://github.com/songquanpeng/one-api) 测试。
+
+### 示例：
+
+- **ChatGPT API 端点**：
+
+   ```bash
+   curl --location --request POST 'http://<你的IP>:<你的端口>/chatgpt/v1/chat/completions' \
+   --header 'Content-Type: application/json' \
+   --header 'Authorization: <你的许可证>' \
+   --data-raw '{
+       "messages": [{"role": "user", "content": "你是什么模型"}],
+       "model": "gpt-4o",
+       "stream": true
+   }'
+   ```
+
+- **GROK API 端点**：
+
+   ```bash
+   curl --location --request POST 'http://<你的IP>:<你的端口>/grok/v1/chat/completions' \
+   --header 'Content-Type: application/json' \
+   --header 'Authorization: <你的许可证>' \
+   --data-raw '{
+       "messages": [{"role": "user", "content": "你是什么模型"}],
+       "model": "grok-3-reasoning",
+       "stream": true
+   }'
+   ```
+
+- **Claude API 端点**：
+
+   ```bash
+   curl --location --request POST 'http://<你的IP>:<你的端口>/claude/v1/chat/completions' \
+   --header 'Content-Type: application/json' \
+   --header 'Authorization: <你的许可证>' \
+   --data-raw '{
+       "messages": [{"role": "user", "content": "你是什么模型"}],
+       "model": "claude-sonnet-3-7",
+       "stream": true
+   }'
+   ```
+
+- **Cursor API 端点**：
+
+   ```bash
+   curl --location --request POST 'http://<你的IP>:<你的端口>/cursor/v1/chat/completions' \
+   --header 'Content-Type: application/json' \
+   --header 'Authorization: <你的许可证>' \
+   --data-raw '{
+       "messages": [{"role": "user", "content": "你是什么模型"}],
+       "model": "claude-3.7-sonnet-thinking",
+       "stream": true
+   }'
+   ```
    
-   <img width="833" alt="image" src="https://github.com/user-attachments/assets/093965e6-d22f-4299-90ba-3658277d4adb" />
-5. 添加对应平台的token，然后就可以直接使用curl或者接入到newapi或oneapi中进行测试了
-   
-   <img width="773" alt="image" src="https://github.com/user-attachments/assets/e666e1c9-968e-4731-9d59-5a2451ab48be" />
-6. 在newapi或oneapi中使用
-   - 密钥：你的许可证
-   - 代理地址：
-      - **ChatGPT**：`http://你的IP:你的端口/chatgpt`
-      - **Grok**：`http://你的IP:你的端口/grok`
-      - **Claude**：`http://你的IP:你的端口/claude`
-      - **Cursor**：`http://你的IP:你的端口/cursor`
-
-
-## 模型列表
+## 支持的模型列表
 
 > 支持openai标准格式的**文件图片上传**，文件（包括图片）可以传url或者base64格式
 
@@ -127,88 +194,8 @@ cd tokens
 - `claude-3.7-sonnet-max`：**Pro订阅类型**的token才可用
 - `claude-3.7-sonnet-thinking-max`：**Pro订阅类型**的token才可用
 
-> 使用此程序逆向的cursor不存在任何乱码，请不要拿tokens和其他开源项目进行对比！！！
-> 
-> 使用此程序逆向的cursor不存在任何封号，请不要拿tokens和其他开源项目进行对比！！！
-
-## Chat2API
-
-- ChatGPT API 端点：`http://你的IP:你的端口/chatgpt/v1/chat/completions`
-
-   ```bash
-   curl --location --request POST 'http://你的IP:你的端口/chatgpt/v1/chat/completions' \
-   --header 'Content-Type: application/json' \
-   --header 'Authorization: 你的许可证' \
-   --data-raw '{
-       "messages": [
-           {
-               "role": "user",
-               "content": "你是什么模型"
-           }
-       ],
-       "model": "gpt-4o",
-       "stream": true
-   }'
-   ```
-
-- GROK API 端点：`http://你的IP:你的端口/grok/v1/chat/completions`
-
-   ```bash
-   curl --location --request POST 'http://你的IP:你的端口/grok/v1/chat/completions' \
-   --header 'Content-Type: application/json' \
-   --header 'Authorization: 你的许可证' \
-   --data-raw '{
-       "messages": [
-           {
-               "role": "user",
-               "content": "你是什么模型"
-           }
-       ],
-       "model": "grok-3-reasoning",
-       "stream": true
-   }'
-   ```
-
-- Claude API 端点：`http://你的IP:你的端口/claude/v1/chat/completions`
-
-   ```bash
-   curl --location --request POST 'http://你的IP:你的端口/claude/v1/chat/completions' \
-   --header 'Content-Type: application/json' \
-   --header 'Authorization: 你的许可证' \
-   --data-raw '{
-       "messages": [
-           {
-               "role": "user",
-               "content": "你是什么模型"
-           }
-       ],
-       "model": "claude-sonnet-3-7",
-       "stream": true
-   }'
-   ```
-
-- Cursor API 端点：`http://你的IP:你的端口/cursor/v1/chat/completions`
-
-   ```bash
-   curl --location --request POST 'http://你的IP:你的端口/cursor/v1/chat/completions' \
-   --header 'Content-Type: application/json' \
-   --header 'Authorization: 你的许可证' \
-   --data-raw '{
-       "messages": [
-           {
-               "role": "user",
-               "content": "你是什么模型"
-           }
-       ],
-       "model": "claude-3.7-sonnet-thinking",
-       "stream": true
-   }'
-   ```
+> 使用此程序逆向的cursor不存在任何乱码、随便封号等情况，请不要拿tokens和其他开源项目进行对比！！！
 
 ## Star History
 
 ![Star History Chart](https://api.star-history.com/svg?repos=fakeoai/tokens&type=Timeline)
-
-
-
-
