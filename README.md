@@ -201,3 +201,7 @@ tokens
 ## Star History
 
 ![Star History Chart](https://api.star-history.com/svg?repos=fakeoai/tokens&type=Timeline)
+
+## 声明
+
+在使用前您应当知悉使用本项目可能会违反相关用户协议，并了解相关的风险。我们不对任何因使用本项目而导致的任何损失负责。
