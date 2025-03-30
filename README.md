@@ -64,7 +64,7 @@ tokens
    ```
 
 4. 编辑配置文件：
-   - 修改 `config/config.yaml` 和 `docker-compose.yaml` 中的配置
+   - 根据自己的情况修改 `config/config.yaml` 和 `docker-compose.yaml` 中的配置（保持默认也可以直接运行）
    - 启动部署后，浏览器访问 `http://<你的IP>:<你的端口>` 进入后台管理页面
    - 默认账号和密码为 `admin`，请及时修改
 
