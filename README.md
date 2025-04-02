@@ -11,7 +11,7 @@
 
 ## 项目功能
 
-- [X] 支持 `Grok`、`Claude`、`Cursor`、`ChatGPT` 等平台逆向转OpenAI标准对话格式
+- [X] 支持 `Grok`、`Claude`、`Cursor`、`ChatGPT`、`Windsurf` 等平台逆向转OpenAI标准对话格式
 - [X] 支持全局代理配置以及各平台代理的独立配置，session标识占位符固定IP等玩法
 - [X] 支持对话内容审核
 - [X] 各平台token池轮训对话，自动标识token模型的上限状态、token异常状态
@@ -126,6 +126,19 @@ tokens
    }'
    ```
    
+- **Windsurf API 端点**：
+
+   ```bash
+   curl --location --request POST 'http://<你的IP>:<你的端口>/windsurf/v1/chat/completions' \
+   --header 'Content-Type: application/json' \
+   --header 'Authorization: <你的许可证>' \
+   --data-raw '{
+       "messages": [{"role": "user", "content": "你是什么模型"}],
+       "model": "deepseek-r1",
+       "stream": true
+   }'
+   ```
+
 ## 支持的模型列表
 
 > 支持openai标准格式的**文件图片上传**，文件（包括图片）可以传url或者base64格式
@@ -197,6 +210,19 @@ tokens
 - `claude-3.7-sonnet-thinking-max`：**Pro订阅类型**的token才可用
 
 > 使用此程序逆向的cursor不存在任何乱码、随便封号等情况，请不要拿tokens和其他开源项目进行对比！！！
+
+### `Windsurf` 模型
+
+- `gpt-4o-2024-08-06`
+- `gpt-4o-mini-2024-07-18`
+- `o3-mini`
+- `gemini-2-0-flash`
+- `claude-3-5-sonnet-20241022`
+- `claude-3-5-haiku-20241022`
+- `claude-3-7-sonnet-20250219`
+- `claude-3-7-sonnet-20250219-thinking`
+- `deepseek-v3`
+- `deepseek-r1`
 
 ## Star History
 
