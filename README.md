@@ -224,6 +224,8 @@ tokens
 - `deepseek-v3`
 - `deepseek-r1`
 
+> Windsurf模型暂未适配图片、文件识别
+
 ## Star History
 
 ![Star History Chart](https://api.star-history.com/svg?repos=fakeoai/tokens&type=Timeline)
