@@ -229,6 +229,7 @@ tokens
 ## Chat2API
 
 Chat2API适用于自己管理token号池以及token的异常、限速等状态的开发者们
+> 此模式下，程序不会进行任何失败重试，会把报错的信息原样返回给开发者们，请开发者们自行适配
 
 ```bash
 curl --location --request POST 'http://<你的IP>:<你的端口>/<各平台前缀>/v1/chat/completions' \
