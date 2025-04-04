@@ -226,6 +226,22 @@ tokens
 
 > Windsurf模型暂未适配图片、文件识别
 
+## Chat2API
+
+Chat2API适用于自己管理token号池以及token的异常、限速等状态的开发者们
+
+```bash
+curl --location --request POST 'http://<你的IP>:<你的端口>/<各平台前缀>/v1/chat/completions' \
+--header 'Content-Type: application/json' \
+--header 'Authorization: <平台Token>' \
+--header 'Tokens-Authorization: <你的许可证>' \
+--data-raw '{
+    "messages": [{"role": "user", "content": "你是什么模型"}],
+    "model": "平台提供的模型",
+    "stream": true
+}'
+```
+
 ## Star History
 
 ![Star History Chart](https://api.star-history.com/svg?repos=fakeoai/tokens&type=Timeline)
