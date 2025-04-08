@@ -11,7 +11,7 @@
 
 ## 项目功能
 
-- [X] 支持 `Grok`、`Claude`、`Cursor`、`ChatGPT`、`Windsurf` 等平台逆向转OpenAI标准对话格式
+- [X] 支持 `Grok`、`Claude`、`Cursor`、`ChatGPT`、`Windsurf`、`Gemini` 等平台逆向转OpenAI标准对话格式
 - [X] 支持全局代理配置以及各平台代理的独立配置，session标识占位符固定IP等玩法
 - [X] 支持对话内容审核
 - [X] 各平台token池轮训对话，自动标识token模型的上限状态、token异常状态
@@ -139,6 +139,19 @@ tokens
    }'
    ```
 
+- **Gemini API 端点**：
+
+   ```bash
+   curl --location --request POST 'http://<你的IP>:<你的端口>/gemini/v1/chat/completions' \
+   --header 'Content-Type: application/json' \
+   --header 'Authorization: <你的许可证>' \
+   --data-raw '{
+       "messages": [{"role": "user", "content": "你是什么模型"}],
+       "model": "gemini-2.0-flash",
+       "stream": true
+   }'
+   ```
+
 ## 支持的模型列表
 
 > 支持openai标准格式的**文件图片上传**，文件（包括图片）可以传url或者base64格式
@@ -225,6 +238,13 @@ tokens
 - `deepseek-r1`
 
 > Windsurf模型暂未适配图片、文件识别
+
+### `Gemini` 模型
+
+- `gemini-2.0-flash`
+- `gemini-2.0-flash-exp`
+- `gemini-2.0-flash-thinking-exp`
+- `gemini-2.5-pro-exp-03-25`
 
 ## Chat2API
 
