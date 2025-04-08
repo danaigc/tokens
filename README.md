@@ -221,6 +221,8 @@ tokens
 - `gpt-4.5-preview`：**Pro订阅类型**的token才可用
 - `claude-3.7-sonnet-max`：**Pro订阅类型**的token才可用
 - `claude-3.7-sonnet-thinking-max`：**Pro订阅类型**的token才可用
+- `gemini-2.5-pro-max`：**Pro订阅类型**的token才可用
+- `gemini-2.5-pro-exp-03-25-max`：**Pro订阅类型**的token才可用
 
 > 使用此程序逆向的cursor不存在任何乱码、随便封号等情况，请不要拿tokens和其他开源项目进行对比！！！
 
