@@ -229,9 +229,9 @@ tokens
 ### `Windsurf` 模型
 
 - `gpt-4o-2024-08-06`
-- `gpt-4o-mini-2024-07-18`
 - `o3-mini`
 - `gemini-2-0-flash`
+- `gemini-2-5-pro`
 - `claude-3-5-sonnet-20241022`
 - `claude-3-5-haiku-20241022`
 - `claude-3-7-sonnet-20250219`
