@@ -2,6 +2,10 @@
 
 一个管理逆向Token的平台，轮训号池将各大平台的对话接口转OpenAI标准格式。
 
+## 在线预览
+
+请 [点击这里](https://tokens-pool.top) 预览演示站
+
 ## 开始接入
 
 请 [点击这里](https://docs.tokens-pool.top) 查看项目文档
